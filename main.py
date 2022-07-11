@@ -1,5 +1,4 @@
 import pathlib
-from _ctypes import sizeof
 from stat import S_IXUSR
 
 
