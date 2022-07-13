@@ -36,7 +36,7 @@ def find_the_first_file_owner_admin_executable_lower_than_14_MB(user_path):
     :return: absolute path string of the file or error message string
     """
     path = pathlib.Path(user_path)
-    max_size = 14*2**20 #14MB
+    max_size = 14 * 2 ** 20  # 14MB
 
     if path.exists() == False:
         return "Path not valid"
@@ -46,9 +46,8 @@ def find_the_first_file_owner_admin_executable_lower_than_14_MB(user_path):
             continue
         # S_IXUSR is a the mask to apply of mode result to know if Owner has execute permission.
         if file.owner() == "admin" and file.stat().st_size <= max_size and file.stat().st_mode & S_IXUSR != 0:
-                return file.name
+            return file.name
     return "No file matching found"
-
 
 def find_the_minimum_quantity_of_permutations(sequence):
     """
@@ -64,10 +63,10 @@ def find_the_minimum_quantity_of_permutations(sequence):
         return "not possible"
     # Start reading the sequence
     for i in range(1, len(sequence)):  # Don't evaluate first element because it's not needed
-        if sequence[i] == sequence[i-1]:
+        if sequence[i] == sequence[i - 1]:
             nb_of_swat += 1
             # find the first element different and swap it
-            for j in range(i+1, len(sequence)):
+            for j in range(i + 1, len(sequence)):
                 if sequence[i] != sequence[j]:
                     temp = sequence[i]
                     sequence[i] = sequence[j]
@@ -78,16 +77,15 @@ def find_the_minimum_quantity_of_permutations(sequence):
     return nb_of_swat
 
 
-seq1 = [0,1,1,0,0,0,1]
-seq2 = [0,1]
-seq3 = [0,0,1]
-seq4 = [0,0,1,1]
-seq5 = [1,0,1,1]
-seq6 = [1,0,0,1,1]
+seq1 = [0, 1, 1, 0, 0, 0, 1]
+seq2 = [0, 1]
+seq3 = [0, 0, 1]
+seq4 = [0, 0, 1, 1]
+seq5 = [1, 0, 1, 1]
+seq6 = [1, 0, 0, 1, 1]
 print(find_the_minimum_quantity_of_permutations(seq1))
 print(find_the_minimum_quantity_of_permutations(seq2))
 print(find_the_minimum_quantity_of_permutations(seq3))
 print(find_the_minimum_quantity_of_permutations(seq4))
 print(find_the_minimum_quantity_of_permutations(seq5))
 print(find_the_minimum_quantity_of_permutations(seq6))
-
