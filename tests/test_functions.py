@@ -39,7 +39,7 @@ class TestResource:
                     mock_size.return_value = Stat(size=MAX_SIZE, mode=EXECUTION_USER_CODE)
                     mock_dir.return_value = False
                     mock_owner.return_value = "admin"
-                    assert script.find_the_first_file_owner_admin_executable_lower_than_14_MB(".") == ".pytest_cache"
+                    assert script.find_the_first_file_owner_admin_executable_lower_than_14_MB(".") == "tests"
 
     def test_find_the_first_file_owner_admin_executable_lower_than_14_MB_size_upp(self):
         with patch.object(pathlib.Path, 'owner') as mock_owner:
