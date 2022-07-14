@@ -13,7 +13,7 @@ minimum quantity of permutations so that the sequence ends interspersed. For
 example, given the sequence 0,1,1,0 how many changes are needed so that the
 result is 0,1,0,1
 
-Functions are in main.py, tests are in tests/test_functions.py
+The functions can be found in the main.py folder, and the tests are in tests/test_functions.py
 After cloning the repo, and before execution please make sure to have a venv and run:
 ```python
 pip3 install -r requirements.txt
