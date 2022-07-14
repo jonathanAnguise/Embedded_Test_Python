@@ -31,7 +31,7 @@
 ## 1. How would you test that the API between the embedded and the cloud is working as expected without having a real physical device
 The device must perform certain actions that will must generate requests like POST, GET, DELETE using a specific protocol (e.g. HTTP/S). Thus, these actions can be mocked and verified on the server (test server) if the action is correct.
 An example could be the function:
-	`create_user(name, password)`, we can run the function in our emulated environment, For instance, we can check the presence of POST requests in the network using Wireshark, and check on our server if there is in our database the name string and the password in the right format (encoded for security reasons). And we do for all the functions that the API documentation shows.
+	`create_user(name, password)`, we can run the function in our emulated environment, For instance, we can check the presence of POST requests in the network using Wireshark, and check on our server if there is in our database the name string and the password in the right format (encoded for security reasons). We do this for all functions that the api documentation has.
 	The weakness here is that we can't really test the UI part: for example, if after creating the user the application changes color, we can see a variable change but we don't really know if it is as expected graphically. However, the problem can be found with a higher level test or a beta tester if there is one.
 
 ## 2. How would you test that the API between the embedded and the mobile is working as expected without having the real physical device
