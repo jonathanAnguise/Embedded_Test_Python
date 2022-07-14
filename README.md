@@ -13,10 +13,16 @@ minimum quantity of permutations so that the sequence ends interspersed. For
 example, given the sequence 0,1,1,0 how many changes are needed so that the
 result is 0,1,0,1
 
+Functions are in main.py, tests are in tests/test_functions.py
+After cloning the repo, and before execution please make sure to have a venv and run:
+```python
+pip3 install -r requirements.txt
+```
+To execute tests, run:
+```bash
+python -m pytest tests/test_functions.py
+```
+
 ## Part 2: System Testing
-1. How would you test that the API between
-the embedded and the cloud is working as
-expected without having the real physical device
-1. How would you test that the API between
-the embedded and the mobile is working as
-expected without having the real physical device
+Here is the markdown file of the exercice:
+* [link](https://github.com/jonathanAnguise/Embedded_Test_Python/blob/main/Part_2_System_testing.md)
